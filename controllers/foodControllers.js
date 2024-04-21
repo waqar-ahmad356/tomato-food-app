@@ -24,4 +24,38 @@ const addFood=async(req,res)=>{
 
 
 }
-export {addFood}
+//all food list
+const listfood=async(req,res)=>{
+    try{
+        const foods=await foodModel.find({})
+        res.json({success:true,data:foods})
+    }
+    catch(error)
+    {
+        console.log(error)
+        res.json({success:false,message:"Error"});
+    }
+
+}
+// remove food items
+
+
+const removefood = async (req, res) => {
+    try {
+        const food = await foodModel.findById(req.body.id);
+
+        fs.unlink(`upload/${food.image}`, () => {})
+        await foodModel.findByIdAndDelete(req.body.id);
+        res.json({success:true,message:'Product Removed'});
+        
+           
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ success: false, message: "Internal server error" });
+    }
+};
+
+
+
+  
+export {addFood,listfood,removefood}
