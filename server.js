@@ -5,6 +5,7 @@ import foodRouter from './routes/foodRoute.js';
 import bodyParser from 'body-parser';
 import userRouter from './routes/userRoute.js';
 import 'dotenv/config';
+import cartRouter from './routes/cartroute.js';
 
 //app config
 const app=express();
@@ -22,6 +23,7 @@ app.use(cors());// access the backend from any frontend
 app.use("/api/food",foodRouter);
 app.use('/images',express.static('upload'));
 app.use('/api/user',userRouter);
+app.use('/api/cart/',cartRouter);
 
 
 app.get('/',(req,res)=>{
