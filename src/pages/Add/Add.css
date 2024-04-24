@@ -1,35 +1,44 @@
-.add{
-    width:70% ;
-    margin-left: max(5vw,25px);
-    margin-top: 50px;
-    font-size: 16px;
-    color: #6d6d6d;
+.add {
+    width: 70%; /* Set the width of the component */
+    margin-left: max(5vw, 25px); /* Set left margin with a minimum value */
+    margin-top: 50px; /* Set top margin */
+    font-size: 16px; /* Set font size */
+    color: #6d6d6d; /* Set text color */
 }
-.add form{
-    gap: 20px;
 
+.add form {
+    gap: 20px; /* Set the gap between form elements */
 }
-.add-image-upload img{
-    width: 120px;
+
+.add-image-upload img {
+    width: 120px; /* Set the width of the uploaded image */
 }
-.add-product-name, .add-product-description{
-    width:max(40%,280px)
+
+.add-product-name,
+.add-product-description {
+    width: max(40%, 280px); /* Set the width of product name and description fields with a minimum value */
 }
-.add-product-name input, .add-product-description textarea{
-    padding: 10px;
+
+.add-product-name input,
+.add-product-description textarea {
+    padding: 10px; /* Set padding for input and textarea */
 }
+
 .add-product-category-price {
-    display: flex;
-    gap: 30px;
+    display: flex; /* Display category and price fields in a row */
+    gap: 30px; /* Set the gap between category and price fields */
 }
-.add-product-category select,.add-product-category-price input{
-    max-width: 120px;
-    padding: 10px;
+
+.add-product-category select,
+.add-product-category-price input {
+    max-width: 120px; /* Set the maximum width of select and input fields */
+    padding: 10px; /* Set padding for select and input fields */
 }
-.add-btn{
-    max-width:120px ;
-    padding: 10px;
-    color: white;
-    background-color: black;
-    cursor: pointer;
+
+.add-btn {
+    max-width: 120px; /* Set the maximum width of the button */
+    padding: 10px; /* Set padding for the button */
+    color: white; /* Set text color */
+    background-color: black; /* Set background color */
+    cursor: pointer; /* Set cursor style */
 }

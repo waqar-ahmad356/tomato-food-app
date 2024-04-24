@@ -1,35 +1,37 @@
-.sidebar{
-    width: 18%;
-    min-height: 100vh;
-    border: 1.5px solid #a9a9a9;
-    border-top: 0;
-    font-size: max(1vw,10px);
-}
-.sidebar-options{
-    padding-top: 50px;
-    padding-left: 20%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.sidebar-option{
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    border: 1px solid #a9a9a9;
-    border-right: 0;
-    padding: 8px 10px;
-    border-radius: 3px 0px 0px 3px;
-    cursor: pointer;
-}
-.sidebar-option.active{
-    background-color: #fff0ed;
-    border-color: tomato;
+.sidebar {
+    width: 18%; /* Set width of sidebar */
+    min-height: 100vh; /* Ensure sidebar covers entire viewport height */
+    border: 1.5px solid #a9a9a9; /* Add border */
+    border-top: 0; /* Remove top border */
+    font-size: max(1vw, 10px); /* Set font size */
 }
 
-/*-----------------------media query -----------------*/
-@media(max-width:900px){
-    .sidebar-option p{
-        display: none;
+.sidebar-options {
+    padding-top: 50px; /* Add padding at the top */
+    padding-left: 20%; /* Add left padding */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange options vertically */
+    gap: 20px; /* Add gap between options */
+}
+
+.sidebar-option {
+    display: flex; /* Use flexbox layout for each option */
+    align-items: center; /* Align items vertically */
+    gap: 13px; /* Add gap between icon and text */
+    border: 1px solid #a9a9a9; /* Add border */
+    border-right: 0; /* Remove right border */
+    padding: 8px 10px; /* Add padding */
+    border-radius: 3px 0px 0px 3px; /* Rounded border */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.sidebar-option.active {
+    background-color: #fff0ed; /* Set background color for active option */
+    border-color: tomato; /* Set border color for active option */
+}
+
+@media (max-width: 900px) {
+    .sidebar-option p {
+        display: none; /* Hide text for options on small screens */
     }
 }

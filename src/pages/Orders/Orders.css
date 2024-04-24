@@ -1,0 +1,49 @@
+.order-item {
+    display: grid; /* Use grid layout for order item */
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr; /* Define column widths */
+    align-items: start; /* Align items at the start of the grid */
+    gap: 30px; /* Set gap between grid items */
+    border: 1px solid tomato; /* Set border */
+    padding: 20px; /* Set padding */
+    margin: 30px 0px; /* Set margin */
+    font-size: 14px; /* Set font size */
+    color: #505050; /* Set text color */
+}
+
+.order-item-food,
+.order-item-name {
+    font-weight: 600; /* Set font weight for order item and name */
+}
+
+.order-item-name {
+    margin-top: 30px; /* Set top margin for order item name */
+    margin-bottom: 5px; /* Set bottom margin for order item name */
+}
+
+.order-item-address {
+    margin-bottom: 10px; /* Set bottom margin for order item address */
+}
+
+.order-item select {
+    background-color: #ffe8e4; /* Set background color for select element */
+    border: 1px solid tomato; /* Set border for select element */
+    width: max(10vw, 120px); /* Set width for select element */
+    padding: 10px; /* Set padding for select element */
+    outline: none; /* Remove outline */
+}
+
+/* Media query for responsive design */
+@media (max-width: 1000px) {
+    .order-item {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        grid-template-columns: 0.5fr 2fr 1fr; /* Adjust column widths for smaller screens */
+        padding: 15px 8px; /* Adjust padding for smaller screens */
+    }
+    .order-item select {
+        padding: 5px; /* Adjust padding for select element on smaller screens */
+        font-size: 12px; /* Adjust font size for select element on smaller screens */
+    }
+    .order-item img {
+        width: 40px; /* Adjust image width for smaller screens */
+    }
+}

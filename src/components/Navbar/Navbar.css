@@ -1,12 +1,14 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 4%;
+.navbar {
+    display: flex; /* Use flexbox layout for navbar */
+    justify-content: space-between; /* Align items with space between */
+    align-items: center; /* Align items vertically */
+    padding: 8px 4%; /* Set padding */
 }
-.navbar .logo{
-    width: max(10%,80px);
+
+.navbar .logo {
+    width: max(10%, 80px); /* Set maximum width for logo */
 }
-.navbar .profile{
-    width: 40px;
+
+.navbar .profile {
+    width: 40px; /* Set width for profile image */
 }
