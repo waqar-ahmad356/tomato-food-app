@@ -1,22 +1,37 @@
-import React, { useState } from 'react'
-import './Home.css';
+// Import React and useState hook from React library
+import React, { useState } from 'react';
+
+
+
+// Import components used in the Home component
 import Header from '../../components/Header/Header';
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu';
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay';
 import AppDownload from '../../components/AppDownload/AppDownload';
 
+// Define the Home component
 const Home = () => {
+  
+  // Define state for the selected category using the useState hook
+  const [category, setCategory] = useState("All");
 
-  const [category,setCategory]=useState("All")
+  // Render the Home component
   return (
     <div>
-    <Header/>
-    <ExploreMenu category={category} setCategory={setCategory}/>
-    <FoodDisplay category={category}/>
-    <AppDownload/>
+      {/* Render the Header component */}
+      <Header />
       
+      {/* Render the ExploreMenu component and pass category and setCategory as props */}
+      <ExploreMenu category={category} setCategory={setCategory} />
+      
+      {/* Render the FoodDisplay component and pass category as a prop */}
+      <FoodDisplay category={category} />
+      
+      {/* Render the AppDownload component */}
+      <AppDownload />
     </div>
-  )
+  );
 }
 
-export default Home
+// Export the Home component
+export default Home;

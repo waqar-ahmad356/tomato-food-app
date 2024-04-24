@@ -1,16 +1,19 @@
-.food-display{
-    margin-top: 30px;
-
+/* Styling for the .food-display class */
+.food-display {
+    margin-top: 30px; /* Adds top margin */
 }
-.food-display h2{
-    font-size: max(2vw,24px);
-    font-weight: 600;
 
+/* Styling for the h2 element inside .food-display */
+.food-display h2 {
+    font-size: max(2vw,24px); /* Sets font size relative to viewport width with a minimum of 24px */
+    font-weight: 600; /* Sets font weight */
 }
-.food-display-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
-    margin-top: 30px;
-    gap: 30px;
-    row-gap: 50px;
+
+/* Styling for the .food-display-list class */
+.food-display-list {
+    display: grid; /* Displays items in a grid container */
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); /* Creates flexible grid columns */
+    margin-top: 30px; /* Adds top margin */
+    gap: 30px; /* Sets gap between grid items */
+    row-gap: 50px; /* Sets gap between grid rows */
 }

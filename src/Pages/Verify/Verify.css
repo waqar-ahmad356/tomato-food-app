@@ -1,0 +1,23 @@
+/* Styles for the Verify component */
+.verify {
+    min-height: 60vh; /* Minimum height of 60% of the viewport height */
+    display: grid; /* Display as grid */
+}
+
+/* Styles for the spinner within the Verify component */
+.verify .spinner {
+    width: 100px; /* Width */
+    height: 100px; /* Height */
+    place-self: center; /* Center the spinner within its grid cell */
+    border: 5px solid #bdbdbd; /* Border */
+    border-top-color: tomato; /* Top border color */
+    border-radius: 50%; /* Border radius to create a circle */
+    animation: rotate 1s infinite; /* Animation for rotation */
+}
+
+/* Keyframes for the rotation animation */
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg); /* Rotate the spinner 360 degrees */
+    }
+}

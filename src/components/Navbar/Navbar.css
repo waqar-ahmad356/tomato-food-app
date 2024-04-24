@@ -1,109 +1,107 @@
+/* Styling for the navigation bar */
+
 .navbar{
-    display: flex;
-    padding: 20px 0;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Display navbar items in a flex layout */
+    padding: 20px 0; /* Add padding above and below the navbar */
+    justify-content: space-between; /* Space items evenly across the navbar */
+    align-items: center; /* Center items vertically within the navbar */
 }
+
 .navbar .logo{
-    width: 150px;
-    cursor: pointer;
+    width: 150px; /* Set width of the logo */
+    cursor: pointer; /* Change cursor to pointer on hover for clickable effect */
 }
+
 .navbar-menu{
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    color: #49557e;
-    font-size: 18px;
-    cursor: pointer;
+    display: flex; /* Display menu items in a flex layout */
+    list-style: none; /* Remove default list styling */
+    gap: 20px; /* Add spacing between menu items */
+    color: #49557e; /* Set color of menu text */
+    font-size: 18px; /* Set font size of menu text */
+    cursor: pointer; /* Change cursor to pointer on hover for clickable effect */
 }
+
 .navbar-right{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    display: flex; /* Display right-side items in a flex layout */
+    align-items: center; /* Center items vertically within the navbar */
+    gap: 40px; /* Add spacing between right-side items */
 }
+
 .navbar button{
-    background-color: transparent;
-    font-size: 16px;
-    color: #49557e;
-    border: 1px solid tomato;
-    padding: 10px 30px;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: 0.3s;
+    background-color: transparent; /* Set background color of button to transparent */
+    font-size: 16px; /* Set font size of button text */
+    color: #49557e; /* Set color of button text */
+    border: 1px solid tomato; /* Add border to button */
+    padding: 10px 30px; /* Add padding to button */
+    cursor: pointer; /* Change cursor to pointer on hover for clickable effect */
+    border-radius: 50px; /* Add border radius to button for rounded corners */
+    transition: 0.3s; /* Add transition effect for smooth hover */
 }
+
 .navbar button:hover{
-    background: #fff4f2;
+    background: #fff4f2; /* Change background color on hover */
 }
+
 .navbar .active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
-
+    padding-bottom: 2px; /* Add bottom padding to active menu item */
+    border-bottom: 2px solid #49557e; /* Add bottom border to active menu item */
 }
+
 .navbar-search-icon{
-    position: relative;
-}.navbar-search-icon .dot{
-    position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background: tomato;
-    top: -7px;
-    right: -7px;
-    border-radius: 5px;
-
+    position: relative; /* Set position to relative for nested dot element */
 }
+
+.navbar-search-icon .dot{
+    position: absolute; /* Set position to absolute for dot */
+    min-width: 10px; /* Set minimum width of dot */
+    min-height: 10px; /* Set minimum height of dot */
+    background: tomato; /* Set background color of dot */
+    top: -7px; /* Position dot above the basket icon */
+    right: -7px; /* Position dot to the right of the basket icon */
+    border-radius: 5px; /* Add border radius to create a circular dot */
+}
+
 .navbar-profile{
-    position: relative;
+    position: relative; /* Set position to relative for dropdown */
 }
+
 .navbar-profile-dropdown{
-    position: absolute;
-    display: none;
-    right: 0;
-    z-index: 1;
+    position: absolute; /* Set position to absolute for dropdown */
+    display: none; /* Hide dropdown by default */
+    right: 0; /* Align dropdown to the right */
+    z-index: 1; /* Set z-index to ensure dropdown appears above other elements */
 }
+
 .navbar-profile:hover .navbar-profile-dropdown{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #fff4f2;
-    padding: 12px 25px;
-    border-radius: 4px;
-    border: 1px solid tomato;
-    outline: 2px solid white;
-    list-style: none;
-
+    display: flex; /* Display dropdown on hover */
+    flex-direction: column; /* Arrange dropdown items in a column layout */
+    gap: 10px; /* Add spacing between dropdown items */
+    background-color: #fff4f2; /* Set background color of dropdown */
+    padding: 12px 25px; /* Add padding to dropdown */
+    border-radius: 4px; /* Add border radius to dropdown */
+    border: 1px solid tomato; /* Add border to dropdown */
+    outline: 2px solid white; /* Add outline to dropdown */
+    list-style: none; /* Remove default list styling */
 }
+
 .navbar-profile-dropdown li{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    cursor: pointer;
-}
-.navbar-profile-dropdown img{
-    width: 20px;
-}
-.navbar-profile-dropdown li:hover{
-    color: tomato;
+    display: flex; /* Display dropdown items in a flex layout */
+    gap: 10px; /* Add spacing between dropdown items */
+    align-items: center; /* Align items vertically within the dropdown */
+    cursor: pointer; /* Change cursor to pointer on hover for clickable effect */
 }
 
-/*-------------media query-------------*/
-@media(max-width:1050px){
-    .navbar .logo{
-        width: 140px;
-    }
-    .navbar-menu{
-        gap: 20px;
-        font-size: 17px;
-    }
-    .navbar-right{
-        gap: 30px;
-    }
-    .navbar-right img{
-        width: 22px;
-    }
-    .navbar-right button{
-        padding: 8px 25px;
-    }
+.navbar-profile-dropdown img{
+    width: 20px; /* Set width of images within the dropdown */
 }
+
+.navbar-profile-dropdown li:hover{
+    color: tomato; /* Change text color on hover */
+}
+
+/* Media queries for responsive design */
+
+
 @media(max-width:900px){
     .navbar .logo{
         width: 120px;

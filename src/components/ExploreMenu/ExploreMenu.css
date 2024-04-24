@@ -1,56 +1,73 @@
-.explore-menu{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Styling for the .explore-menu class */
+.explore-menu {
+    display: flex; /* Displays items in a flex container */
+    flex-direction: column; /* Arranges items in a column */
+    gap: 20px; /* Sets gap between child elements */
 }
-.explore-menu h1{
-    color: #262226;
-    font-weight: 500;
 
+/* Styling for the h1 element inside .explore-menu */
+.explore-menu h1 {
+    color: #262226; /* Sets text color */
+    font-weight: 500; /* Sets font weight */
 }
-.explore-menu-text{
-    max-width: 60%;
-    color: #808080;
+
+/* Styling for the .explore-menu-text class */
+.explore-menu-text {
+    max-width: 60%; /* Sets maximum width */
+    color: #808080; /* Sets text color */
 }
-.explore-menu-list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    text-align: center;
-    margin: 20px 0px;
-    overflow-x: scroll;
+
+/* Styling for the .explore-menu-list class */
+.explore-menu-list {
+    display: flex; /* Displays items in a flex container */
+    justify-content: space-between; /* Distributes items evenly along the main axis */
+    align-items: center; /* Centers items vertically */
+    gap: 30px; /* Sets gap between child elements */
+    text-align: center; /* Centers text */
+    margin: 20px 0px; /* Sets margin */
+    overflow-x: scroll; /* Enables horizontal scrolling */
 }
-.explore-menu-list::-webkit-scrollbar{
+
+/* Hides scrollbar in WebKit browsers */
+.explore-menu-list::-webkit-scrollbar {
     display: none;
 }
-.explore-menu-list-item img{
-    width: 7.5vw;
-    min-width: 80px;
-    cursor: pointer;
-    transition: 0.2s;
-    border-radius: 50%;
+
+/* Styling for images within .explore-menu-list-item */
+.explore-menu-list-item img {
+    width: 7.5vw; /* Sets image width relative to viewport width */
+    min-width: 80px; /* Sets minimum width for the image */
+    cursor: pointer; /* Changes cursor to pointer */
+    transition: 0.2s; /* Adds transition effect with duration of 0.2 seconds */
+    border-radius: 50%; /* Rounds image corners */
 }
-.explore-menu-list-item p{
-    margin-top: 10px;
-    color: #747474;
-    cursor: pointer;
-    font-size: max(1.4vw,16px);
+
+/* Styling for paragraphs within .explore-menu-list-item */
+.explore-menu-list-item p {
+    margin-top: 10px; /* Sets top margin */
+    color: #747474; /* Sets text color */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-size: max(1.4vw,16px); /* Sets font size relative to viewport width with a minimum of 16px */
 }
-.explore-menu hr{
-    margin: 10px 0px;
-    height: 2px;
-    background-color: #e2e2e2;
-    border: none;
+
+/* Styling for horizontal rule within .explore-menu */
+.explore-menu hr {
+    margin: 10px 0px; /* Sets margin */
+    height: 2px; /* Sets height */
+    background-color: #e2e2e2; /* Sets background color */
+    border: none; /* Removes border */
 }
-.explore-menu-list-item .active{
-    border: 4px solid tomato;
-    padding: 2px;
+
+/* Styling for active images within .explore-menu-list-item */
+.explore-menu-list-item .active {
+    border: 4px solid tomato; /* Sets border color and width */
+    padding: 2px; /* Adds padding */
 }
-/*-------------------media query----------------*/
-@media(max-width:1050){
-    .explore-menu-text{
-        max-width: 100%;
-        font-size: 14px;
+
+/* Media query for screens with a maximum width of 1050px */
+@media(max-width:1050px) {
+    .explore-menu-text {
+        max-width: 100%; /* Sets maximum width to 100% */
+        font-size: 14px; /* Sets font size */
     }
 }

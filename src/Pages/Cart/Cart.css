@@ -1,96 +1,129 @@
-.cart{
-    margin-top: 100px;
+/* Styles for the shopping cart container */
+.cart {
+    margin-top: 100px; /* Adds space on top */
 }
-.cart-items-title{
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
-    align-items: center;
-    color: grey;
-    font-size: max(1vw,12px);
-}
-.cart-items-item{
-    margin: 10px 0px;
-    color: black;
-}
-.cart-items-item img{
-    width: 50px;
-}
-.cart hr{
-    height: 1px;
-    background-color: #e2e2e2;
-    border: none;
-}
-.cross{
-    cursor: pointer;
-    font-size: 20px;
-}
-.cart-bottom{
-    display: flex;
-    justify-content: space-between;
-    gap: max(12vw,20px);
 
-    margin: 80px;
-}
-.cart-total{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.cart-total-details{
-    display: flex;
-    justify-content: space-between;
-    color: #555;
-}
-.cart-total hr{
-    margin: 10px 0px;
-}
-.cart-total button{
-    border: none;
-    color: white;
-    background-color: tomato;
-    width: max(15vw,200px);
-    padding: 12px 0px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.cart-promo-code{
-    flex: 1;
-}
-.cart-promo-code p{
-    color: #555;
-}
-.cart-promo-code-input{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
+/* Styles for the titles of items in the cart */
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr; /* Grid layout for item titles */
     align-items: center;
-    background-color: #eaeaea;
-    border-radius: 4px;
+    color: grey; /* Title color */
+    font-size: max(1vw, 12px); /* Responsive font size */
 }
-.cart-promo-code-input input{
+
+/* Styles for individual items in the cart */
+.cart-items-item {
+    margin: 10px 0px; /* Margin for each item */
+    color: black; /* Item text color */
+}
+
+/* Styles for images within items */
+.cart-items-item img {
+    width: 50px; /* Image width */
+}
+
+/* Separator line between sections of the cart */
+.cart hr {
+    height: 1px;
+    background-color: #e2e2e2; /* Color of the line */
+    border: none;
+}
+
+/* Styles for the cross icon (possibly for removing items) */
+.cross {
+    cursor: pointer; /* Cursor style */
+    font-size: 20px; /* Cross icon size */
+}
+
+/* Styles for the bottom section of the cart */
+.cart-bottom {
+    display: flex;
+    justify-content: space-between; /* Spacing between elements */
+    gap: max(12vw, 20px); /* Gap between items */
+
+    margin: 80px; /* Margin around the bottom section */
+}
+
+/* Styles for the total section of the cart */
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Column layout for total section */
+    gap: 20px; /* Spacing between elements */
+}
+
+/* Styles for details within the total section */
+.cart-total-details {
+    display: flex;
+    justify-content: space-between; /* Spacing between details */
+    color: #555; /* Text color */
+}
+
+/* Separator line within the total section */
+.cart-total hr {
+    margin: 10px 0px; /* Margin around the line */
+}
+
+/* Styles for the checkout button */
+.cart-total button {
+    border: none;
+    color: white; /* Button text color */
+    background-color: tomato; /* Button background color */
+    width: max(15vw, 200px); /* Button width */
+    padding: 12px 0px; /* Padding inside the button */
+    border-radius: 4px; /* Button border radius */
+    cursor: pointer; /* Cursor style */
+}
+
+/* Styles for the promo code section */
+.cart-promo-code {
+    flex: 1; /* Flex property */
+}
+
+/* Styles for text within the promo code section */
+.cart-promo-code p {
+    color: #555; /* Text color */
+}
+
+/* Styles for the input field and button within the promo code section */
+.cart-promo-code-input {
+    margin-top: 10px; /* Margin at the top */
+    display: flex;
+    justify-content: space-between; /* Spacing between elements */
+    align-items: center;
+    background-color: #eaeaea; /* Background color */
+    border-radius: 4px; /* Border radius */
+}
+
+/* Styles for the input field within the promo code section */
+.cart-promo-code-input input {
     background-color: transparent;
     border: none;
-    outline: none;
-    padding-left: 10px;
-}
-.cart-promo-code-input button{
-    width: max(10vw,150px);
-    padding: 12px 5px;
-    border: none;
-    background-color: black;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+    outline: none; /* Remove outline */
+    padding-left: 10px; /* Padding on the left */
 }
 
-/*------------------media query------------------*/
+/* Styles for the button within the promo code section */
+.cart-promo-code-input button {
+    width: max(10vw, 150px); /* Button width */
+    padding: 12px 5px; /* Padding inside the button */
+    border: none; /* No border */
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 4px; /* Button border radius */
+    cursor: pointer; /* Cursor style */
+}
 
-@media(max-width:750px){
-    .cart-bottom{
+/* Media query for smaller screens */
+@media (max-width: 750px) {
+    /* Reverses the order of elements in the bottom section for smaller screens */
+    .cart-bottom {
         flex-direction: column-reverse;
     }
-    .cart-promo-code{
+    
+    /* Aligns the promo code section to the start for smaller screens */
+    .cart-promo-code {
         justify-content: start;
     }
 }

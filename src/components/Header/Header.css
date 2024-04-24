@@ -1,58 +1,65 @@
-.header{
-    height: 34vw;
-    margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: contain;
-    position: relative;
+/* Styling for the .header class */
+.header {
+    height: 34vw; /* Sets height relative to viewport width */
+    margin: 30px auto; /* Centers the header horizontally */
+    background: url('/header_img.png') no-repeat; /* Sets background image */
+    background-size: contain; /* Scales background image to fit container */
+    position: relative; /* Sets position to relative */
+}
 
+/* Styling for the .header-content class */
+.header-content {
+    position: absolute; /* Sets position to absolute */
+    display: flex; /* Displays items in a flex container */
+    flex-direction: column; /* Arranges items in a column */
+    align-items: flex-start; /* Aligns items to the start */
+    gap: 1.5vw; /* Sets gap between child elements */
+    max-width: 50%; /* Sets maximum width */
+    bottom: 10%; /* Sets distance from the bottom */
+    left: 6vw; /* Sets distance from the left */
+    animation: fadein 3s; /* Adds fade-in animation */
 }
-.header-content{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
-    left: 6vw;
-    animation: fadein 3s;
+
+/* Styling for the h2 element within .header-content */
+.header-content h2 {
+    font-weight: 500; /* Sets font weight */
+    font-size: max(4.5vw,22px); /* Sets font size relative to viewport width with a minimum of 22px */
+    color: white; /* Sets text color */
 }
-.header-content h2{
-    font-weight: 500;
-    font-size: max(4.5vw,22px);
-    color: white;
+
+/* Styling for the p element within .header-content */
+.header-content p {
+    color: white; /* Sets text color */
+    font-size: 1vw; /* Sets font size relative to viewport width */
 }
-.header-content p{
-    color: white;
-    font-size: 1vw;
+
+/* Styling for the button within .header-content */
+.header-content button {
+    border: none; /* Removes border */
+    color: #747474; /* Sets text color */
+    font-weight: 500; /* Sets font weight */
+    padding: 1vw 2.3vw; /* Sets padding */
+    background-color: white; /* Sets background color */
+    font-size: max(1vw,13px); /* Sets font size relative to viewport width with a minimum of 13px */
+    border-radius: 50px; /* Sets border radius */
 }
-.header-content button{
-    border: none;
-    color: #747474;
-    font-weight: 500;
-    padding: 1vw 2.3vw;
-    background-color: white;
-    font-size: max(1vw,13px);
-    border-radius: 50px;
-}
-/*---------------media query-------------*/
-@media(max-width:1050px){
-    
-    .header-content{
-        max-width: 45%;
+
+/* Media query for screens with a maximum width of 1050px */
+@media(max-width:1050px) {
+    .header-content {
+        max-width: 45%; /* Sets maximum width */
     }
-    
 }
-@media(max-width:750px){
-   
-    .header-content{
-        max-width: 65%;
+
+/* Media query for screens with a maximum width of 750px */
+@media(max-width:750px) {
+    .header-content {
+        max-width: 65%; /* Sets maximum width */
     }
-    .header-content p{
-        display: none;
+    .header-content p {
+        display: none; /* Hides paragraphs */
     }
-    .header-content button{
-        padding: 2vw 4vw;
+    .header-content button {
+        padding: 2vw 4vw; /* Sets padding */
     }
-    
 }

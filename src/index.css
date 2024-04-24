@@ -1,27 +1,52 @@
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
-  scroll-behavior: smooth;
+
+/* Global styles */
+* {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Box model */
+  font-family: "Outfit", sans-serif; /* Set font family */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
 }
-body{
-  min-height: 100vh;
+
+/* Body styles */
+body {
+  min-height: 100vh; /* Minimum height of viewport */
 }
-a{
-  text-decoration: none;
-  color: inherit;
+
+/* Anchor tag styles */
+a {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit color from parent */
 }
-.app{
-  width: 80%;
-  margin: auto;
+
+/* Main app container styles */
+.app {
+  width: 80%; /* Set width */
+  margin: auto; /* Center horizontally */
 }
-@keyframes fadein{
-  0%{
-    opacity: 0;
+
+/* Animation to fade in elements */
+@keyframes fadein {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
   }
-  100%{
-    opacity: 1;
+  100% {
+    opacity: 1; /* End with opacity 1 */
   }
+}
+
+/* Custom scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+  width: 10px; /* Set width */
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.5); /* Track background color */
+  border-radius: 10px; /* Track border radius */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: tomato; /* Thumb color */
 }

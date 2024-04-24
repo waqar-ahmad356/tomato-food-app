@@ -1,66 +1,84 @@
-.login-popup{
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: #00000090;
-    display: grid;
+/* Styles for the login popup background overlay */
+.login-popup {
+    position: absolute; /* Position the popup relative to the viewport */
+    z-index: 1; /* Ensure it appears above other content */
+    width: 100%; /* Cover the entire viewport width */
+    height: 100%; /* Cover the entire viewport height */
+    background-color: #00000090; /* Semi-transparent black background */
+    display: grid; /* Use CSS grid for layout */
 }
-.login-popup-container{
-    place-self: center;
-    width: max(23vw,330px);
-    color: #808080;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 25px 30px;
-    border-radius: 8px;
-    font-size: 14px;
-    animation: fadein 0.5s;
 
+/* Styles for the container of the login form */
+.login-popup-container {
+    place-self: center; /* Center the container within the grid */
+    width: max(23vw, 330px); /* Set a maximum width for the container */
+    color: #808080; /* Text color */
+    background-color: white; /* Background color of the container */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    gap: 25px; /* Spacing between child elements */
+    padding: 25px 30px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    animation: fadein 0.5s; /* Apply fade-in animation */
 }
-.login-popup-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
+
+/* Styles for the title bar of the login popup */
+.login-popup-title {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Align items vertically */
+    color: black; /* Title text color */
 }
-.login-popup-title img{
-    width: 16px;
-    cursor: pointer;
+
+/* Styles for the close button in the title bar */
+.login-popup-title img {
+    width: 16px; /* Set width of the close button icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
-.login-popup-input{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+/* Styles for the container of input fields */
+.login-popup-input {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    gap: 20px; /* Spacing between child elements */
 }
-.login-popup-input input{
-    outline: none;
-    border: 1px solid #c9c9c9;
-    padding: 10px;
-    border-radius: 4px;
+
+/* Styles for input fields */
+.login-popup-input input {
+    outline: none; /* Remove outline on focus */
+    border: 1px solid #c9c9c9; /* Border style */
+    padding: 10px; /* Padding inside the input field */
+    border-radius: 4px; /* Rounded corners */
 }
-.login-popup-container button{
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    color: white;
-    background-color: tomato;
-    font-size: 15px;
-    cursor: pointer;
+
+/* Styles for the login/signup button */
+.login-popup-container button {
+    border: none; /* Remove border */
+    padding: 10px; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners */
+    color: white; /* Text color */
+    background-color: tomato; /* Background color */
+    font-size: 15px; /* Font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
-.login-popup-condition{
-    display: flex;
-    align-items: start;
-    gap: 8px;
-    margin-top: -15px;
+
+/* Styles for the container of terms and conditions checkbox and text */
+.login-popup-condition {
+    display: flex; /* Use flexbox for layout */
+    align-items: start; /* Align items at the start of the container */
+    gap: 8px; /* Spacing between child elements */
+    margin-top: -15px; /* Negative margin to adjust spacing */
 }
-.login-popup-condition input{
-    margin-top: 5px;
+
+/* Styles for the terms and conditions checkbox */
+.login-popup-condition input {
+    margin-top: 5px; /* Adjust top margin */
 }
-.login-popup p span{
-    color: tomato;
-    font-weight: 500;
-    cursor: pointer;
+
+/* Styles for clickable spans within paragraphs */
+.login-popup p span {
+    color: tomato; /* Text color */
+    font-weight: 500; /* Bold font weight */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }

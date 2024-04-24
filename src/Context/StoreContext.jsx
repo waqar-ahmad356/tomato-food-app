@@ -1,38 +1,35 @@
-// Importing the axios library for making HTTP requests
 import axios from 'axios';
-
-// Importing necessary React modules and functions
 import React, { createContext, useEffect, useState } from 'react';
 
-// Creating a context object to share data between components
+// Create a new context called StoreContext
 export const StoreContext = createContext(null);
 
-// Defining a functional component named StoreContextProvider
+// Define the StoreContextProvider component
 const StoreContextProvider = (props) => {
-    // State variables to hold food list, token, cart items, and API URL
-    const [food_list, setFoodList] = useState([]);
-    const [token, setToken] = useState("");
-    const url = "http://localhost:4000";
+    // Define state variables using the useState hook
+    const [food_list, setFoodList] = useState([]); // State for food list
+    const [token, setToken] = useState(""); // State for authentication token
+    const url = "http://localhost:4000"; // API base URL
     const [cartitem, setCartItem] = useState(() => {
-        // Initializing cart items with data from local storage, if available
+        // State for cart items, initialized from localStorage
         const storedCart = localStorage.getItem("cart");
         return storedCart ? JSON.parse(storedCart) : {};
     });
 
-    // useEffect hook to save cart data to local storage whenever it changes
+    // Effect to update localStorage when cartitem state changes
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cartitem));
     }, [cartitem]);
 
     // Function to add an item to the cart
     const addToCart = async (itemId) => {
-        // If the item is not in the cart, add it; otherwise, increment its quantity
+        // Update cartitem state
         if (!cartitem[itemId]) {
             setCartItem((prev) => ({ ...prev, [itemId]: 1 }));
         } else {
             setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         }
-        // If a token is available, send a request to the server to add the item to the cart
+        // Send request to server to update cart if user is authenticated
         if (token) {
             await axios.post(url + "/api/cart/add", { itemId }, { headers: { token } });
         }
@@ -40,7 +37,7 @@ const StoreContextProvider = (props) => {
 
     // Function to remove an item from the cart
     const removeFromCart = async (itemId) => {
-        // If the item quantity is more than 1, decrement its quantity; otherwise, remove it from the cart
+        // Update cartitem state
         if (cartitem[itemId] > 1) {
             setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
         } else {
@@ -48,14 +45,15 @@ const StoreContextProvider = (props) => {
             delete newCart[itemId];
             setCartItem(newCart);
         }
-        // If a token is available, send a request to the server to remove the item from the cart
+        // Send request to server to update cart if user is authenticated
         if (token) {
             await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });
         }
     };
 
-    // Function to calculate the total amount of items in the cart
+    // Function to calculate total cart amount
     const getTotalCartAmount = () => {
+        // Calculate total amount based on items in the cart and their prices
         let totalAmount = 0;
         for (const itemId in cartitem) {
             if (cartitem[itemId] > 0) {
@@ -70,19 +68,21 @@ const StoreContextProvider = (props) => {
         return totalAmount;
     };
 
-    // Function to fetch the list of food items from the server
+    // Function to fetch list data from the server
     const fetchListData = async () => {
+        // Fetch list data from the server and update food_list state
         const response = await axios.get(url + '/api/food/list');
         setFoodList(response.data.data);
     };
 
-    // Function to load cart data from the server based on the token
+    // Function to load cart data from the server
     const loadCartData = async (token) => {
+        // Load cart data from the server and update cartitem state
         const response = await axios.post(url + "api/cart/get", {}, { headers: { token } });
         setCartItem(response.data.cartData);
     };
 
-    // useEffect hook to load initial data when the component mounts
+    // Effect to fetch list data and load cart data when component mounts
     useEffect(() => {
         async function loadData() {
             await fetchListData();
@@ -95,7 +95,16 @@ const StoreContextProvider = (props) => {
         loadData();
     }, []);
 
-    // Creating a context value object to provide to consuming components
+    // Function to clear cart and token when user logs out
+    const logout = () => {
+        // Clear cart and token from localStorage and reset state
+        localStorage.removeItem("cart");
+        localStorage.removeItem("token");
+        setCartItem({});
+        setToken("");
+    };
+
+    // Define the context value object with all the necessary values and functions
     const contextValue = {
         food_list,
         cartitem,
@@ -105,10 +114,11 @@ const StoreContextProvider = (props) => {
         getTotalCartAmount,
         url,
         setToken,
-        token
+        token,
+        logout // Adding logout function to context value
     };
 
-    // Returning the provider component with the context value and children
+    // Render the StoreContext.Provider with the context value and children components
     return (
         <StoreContext.Provider value={contextValue}>
             {props.children}
@@ -116,5 +126,5 @@ const StoreContextProvider = (props) => {
     );
 };
 
-// Exporting the StoreContextProvider component as the default export
+// Export the StoreContextProvider component
 export default StoreContextProvider;

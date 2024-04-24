@@ -1,36 +1,48 @@
-.place-order{
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 50px;
-    margin-top: 100px;
+/* Styles for the PlaceOrder component */
+.place-order {
+    display: flex; /* Display as flex container */
+    align-items: start; /* Align items at the start */
+    justify-content: space-between; /* Space between items */
+    gap: 50px; /* Gap between items */
+    margin-top: 100px; /* Margin at the top */
 }
-.place-order-left{
-    width: 100%;
-    max-width: max(30%,500px);
-}
-.place-order-left .title{
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 50px;
 
+/* Styles for the left section of PlaceOrder */
+.place-order-left {
+    width: 100%; /* Full width */
+    max-width: max(30%, 500px); /* Maximum width with a minimum of 30% and maximum of 500px */
 }
-.place-order-left input{
-    margin-bottom: 15px;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #c5c5c5;
-    outline-color: tomato;
-    border-radius: 4px;
+
+/* Styles for the title within the left section */
+.place-order-left .title {
+    font-size: 30px; /* Font size */
+    font-weight: 600; /* Font weight */
+    margin-bottom: 50px; /* Margin at the bottom */
 }
-.place-order-left .multi-fields{
-    display: flex;
-    gap: 10px;
+
+/* Styles for input fields within the left section */
+.place-order-left input {
+    margin-bottom: 15px; /* Margin at the bottom */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    border: 1px solid #c5c5c5; /* Border */
+    outline-color: tomato; /* Outline color */
+    border-radius: 4px; /* Border radius */
 }
-.place-order-right{
-    width: 100%;
-    max-width: max(40%,500px);
+
+/* Styles for multiple input fields within the left section */
+.place-order-left .multi-fields {
+    display: flex; /* Display as flex container */
+    gap: 10px; /* Gap between items */
 }
-.place-order-right .cart-total button{
-    margin-top: 30px;
+
+/* Styles for the right section of PlaceOrder */
+.place-order-right {
+    width: 100%; /* Full width */
+    max-width: max(40%, 500px); /* Maximum width with a minimum of 40% and maximum of 500px */
+}
+
+/* Styles for the button within the cart-total section in the right section */
+.place-order-right .cart-total button {
+    margin-top: 30px; /* Margin at the top */
 }

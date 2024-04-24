@@ -1,0 +1,65 @@
+/* Styles for the MyOrders component */
+.my-orders {
+    margin: 50px 0px; /* Margin around the component */
+}
+
+/* Styles for the container within the MyOrders component */
+.my-orders .container {
+    display: flex; /* Display as flex container */
+    flex-direction: column; /* Column layout */
+    gap: 20px; /* Spacing between items */
+    margin-top: 30px; /* Margin at the top */
+}
+
+/* Styles for each order within the MyOrders component */
+.my-orders-order {
+    display: grid; /* Display as grid */
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr; /* Grid layout for order details */
+    align-items: center; /* Align items vertically */
+    gap: 30px; /* Gap between columns */
+    font-size: 14px; /* Font size */
+    padding: 10px 20px; /* Padding */
+    color: #454545; /* Text color */
+    border: 1px solid tomato; /* Border */
+}
+
+/* Styles for images within orders */
+.my-orders-order img {
+    width: 50px; /* Image width */
+}
+
+/* Styles for the status symbol within orders */
+.my-orders-order p span {
+    color: tomato; /* Color of the status symbol */
+}
+
+/* Styles for paragraphs within orders */
+.my-orders-order p {
+    font-weight: 500; /* Font weight */
+    color: #454545; /* Text color */
+}
+
+/* Styles for buttons within orders */
+.my-orders-order button {
+    border: none; /* No border */
+    padding: 12px 0px; /* Padding */
+    border-radius: 4px; /* Border radius */
+    background-color: #ffe1e1; /* Button background color */
+    color: #454545; /* Button text color */
+    cursor: pointer; /* Cursor style */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 900px) {
+    /* Adjust grid layout for smaller screens */
+    .my-orders-order {
+        grid-template-columns: 1fr 2fr 1fr; /* Adjusted grid layout */
+        row-gap: 5px; /* Gap between rows */
+        font-size: 12px; /* Font size */
+    }
+    
+    /* Adjust button font size for smaller screens */
+    .my-orders-order button {
+        font-size: 10px; /* Smaller font size */
+    }
+}
