@@ -1,36 +1,38 @@
+// Importing necessary modules
 import express from 'express';
 import cors from 'cors';
-import { connectDB } from './config/db.js';
-import foodRouter from './routes/foodRoute.js';
-import bodyParser from 'body-parser';
-import userRouter from './routes/userRoute.js';
-import 'dotenv/config';
-import cartRouter from './routes/cartroute.js';
+import bodyParser from 'body-parser'; // Deprecated in newer versions of Express, not used in this code
+import 'dotenv/config'; // Loading environment variables
+import foodRouter from './routes/foodRoute.js'; // Importing food routes
+import userRouter from './routes/userRoute.js'; // Importing user routes
+import cartRouter from './routes/cartroute.js'; // Importing cart routes
+import orderRouter from './routes/orderRoute.js'; // Importing order routes
+import { connectDB } from './config/db.js'; // Importing database connection function
 
-//app config
-const app=express();
-const port=4000;
+// Initializing Express app
+const app = express();
+const port = 4000; // Port number for the server
 
-//db connection
-
+// Connecting to the database
 connectDB();
 
-//middleware
-app.use(express.json());//when request from the frontend to backend that will be parsed to json
+// Middleware setup
+app.use(express.json()); // Parsing JSON bodies of incoming requests
+app.use(cors()); // Allowing cross-origin requests
+app.use('/images', express.static('upload')); // Serving static files (images) from the 'upload' directory
 
-app.use(cors());// access the backend from any frontend
-//api end point
-app.use("/api/food",foodRouter);
-app.use('/images',express.static('upload'));
-app.use('/api/user',userRouter);
-app.use('/api/cart/',cartRouter);
+// Setting up routes
+app.use("/api/food", foodRouter); // Food-related routes
+app.use("/api/user", userRouter); // User-related routes
+app.use("/api/cart", cartRouter); // Cart-related routes
+app.use("/api/order", orderRouter); // Order-related routes
 
-
-app.get('/',(req,res)=>{
-    res.send("api working");
-})
-
-app.listen(port,()=>{
-    console.log(`Server started on http://localhost:${port}`)
+// Root route
+app.get('/', (req, res) => {
+    res.send("API working"); // Sending a simple response for the root route
 });
 
+// Starting the server
+app.listen(port, () => {
+    console.log(`Server started on http://localhost:${port}`); // Logging a message when the server starts
+});
