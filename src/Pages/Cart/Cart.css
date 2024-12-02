@@ -120,6 +120,7 @@
     /* Reverses the order of elements in the bottom section for smaller screens */
     .cart-bottom {
         flex-direction: column-reverse;
+        margin: 10px;
     }
     
     /* Aligns the promo code section to the start for smaller screens */
