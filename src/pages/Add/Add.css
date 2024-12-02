@@ -16,16 +16,18 @@
 
 .add-product-name,
 .add-product-description {
-    width: max(40%, 280px); /* Set the width of product name and description fields with a minimum value */
+    width: 100%;
 }
 
 .add-product-name input,
 .add-product-description textarea {
+    width: 100%;
     padding: 10px; /* Set padding for input and textarea */
 }
 
 .add-product-category-price {
     display: flex; /* Display category and price fields in a row */
+    flex-wrap: wrap;
     gap: 30px; /* Set the gap between category and price fields */
 }
 

@@ -47,3 +47,8 @@
         width: 40px; /* Adjust image width for smaller screens */
     }
 }
+@media (max-width:521px){
+    .order-item {
+        grid-template-columns: 1fr;
+    }
+}
