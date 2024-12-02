@@ -126,4 +126,14 @@
     .navbar-menu{
         display: none;
     }
+    .navbar-right button{
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
+@media (max-width:521px){
+    .navbar-right button{
+        padding: 7px 10px;
+        font-size: 9px;
+    }
 }

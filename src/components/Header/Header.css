@@ -22,6 +22,7 @@
 
 /* Styling for the h2 element within .header-content */
 .header-content h2 {
+    
     font-weight: 500; /* Sets font weight */
     font-size: max(4.5vw,22px); /* Sets font size relative to viewport width with a minimum of 22px */
     color: white; /* Sets text color */
@@ -53,8 +54,15 @@
 
 /* Media query for screens with a maximum width of 750px */
 @media(max-width:750px) {
+    .header{
+        margin: 10px auto;
+    }
     .header-content {
         max-width: 65%; /* Sets maximum width */
+        bottom: 3%;
+    }
+    .header-content h2{
+        line-height: 24px;
     }
     .header-content p {
         display: none; /* Hides paragraphs */

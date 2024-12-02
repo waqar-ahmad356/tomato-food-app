@@ -82,3 +82,8 @@
     font-weight: 500; /* Bold font weight */
     cursor: pointer; /* Change cursor to pointer on hover */
 }
+@media (max-width:521px){
+    .login-popup-container {
+        width: max(23vw, 300px);
+    }
+}
