@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
     // Define state variables using the useState hook
     const [food_list, setFoodList] = useState([]); // State for food list
     const [token, setToken] = useState(""); // State for authentication token
-    const url = "http://localhost:4000"; // API base URL
+    const url = "http://localhost:8080"; // API base URL
     const [cartitem, setCartItem] = useState(() => {
         // State for cart items, initialized from localStorage
         const storedCart = localStorage.getItem("cart");
